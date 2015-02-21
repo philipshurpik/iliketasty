@@ -1,23 +1,18 @@
 <template name="recipePage">
-	<div id="recipePage" class="page recipe-page page-animate page-animate-start">
-        <div class="recipe-picture">
-            <img src="/category/vanilla.jpg">
+	<div id="recipePage" class="page recipe-page page-animate page-animate-start" >
+        <div class="recipe-picture" style="background-image: url({{picture}})">
+           <!--  <img src="{{picture}}"> -->
+            <div class="recipe-overlay"></div>
+            <div class="text-title">
+                <div class="rec-title">{{title}}</div>
+                <div class="recipe-marks">
+                    <div class="recipe-time"><span class="icon icon-star-filled"></span>{{time}}</div>
+                    <div class="recipe-likes"><span class="icon icon-star-filled"></span>2</div>
+                </div>
+            </div>
         </div>
 
         <div class="div-inset">
-
-            <div class="text-label">
-                Title: {{title}}
-            </div>
-            <div class="text-label">
-                Time: {{time}}
-            </div>
-            <div class="text-label">
-                Likes: nothing
-            </div>
-            <div class="text-label">
-            About
-            </div>
             <div class="text-label">
                 {{description}}
             </div>
