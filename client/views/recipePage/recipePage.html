@@ -27,8 +27,13 @@
             <div class="text-label">
                 Ingredients
             </div>
+            <div class="div-inset">
+                {{#each ingredientsList}}
+                    {{> ingredient}}
+                {{/each}}
+            </div>
             <div class="button-wrapper">
-                <button class="btn btn-positive btn-block make-not-active">
+                <button class="btn btn-positive btn-block btn-add-cart">
                     <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Add to shopping list
                 </button>
             </div>

@@ -1,5 +1,5 @@
 Template.categoryPage.rendered = function() {
-    Session.set('headerState', { text: "Recepies", backPage: "categories" });
+    Session.set('headerState', { text: "Recepies", back: true });
     setTimeout(function() {
         //$(this.find('.category-page')).removeClass('page-animate');
     }.bind(this), 500);

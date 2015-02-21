@@ -1,5 +1,5 @@
 Template.signinPage.rendered = function() {
-    Session.set('headerState', { text: "Вход в программу" });
+    Session.set('headerState', { text: "", back: true });
 };
 Template.signinPage.events({
     'submit': function(event) {

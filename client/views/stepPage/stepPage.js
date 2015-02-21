@@ -5,5 +5,7 @@ Template.stepPage.events({
 
 });
 Template.stepPage.helpers({
-
+    stepsList: function() {
+        return this.steps;
+    }
 });
