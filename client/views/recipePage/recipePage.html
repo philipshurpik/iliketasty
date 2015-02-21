@@ -6,8 +6,8 @@
             <div class="text-title">
                 <div class="rec-title">{{title}}</div>
                 <div class="recipe-marks">
-                    <div class="recipe-time"><span class="icon icon-star-filled"></span>{{time}}</div>
-                    <div class="recipe-likes"><span class="icon icon-star-filled"></span>2</div>
+                    <div class="recipe-time"><span class="icon icon-clock"></span>{{time}}</div>
+                    <div class="recipe-likes"><span class="icon icon-favorites"></span>2</div>
                 </div>
             </div>
         </div>
@@ -27,8 +27,13 @@
             <div class="text-label">
                 Ingredients
             </div>
+            <div class="div-inset">
+                {{#each ingredientsList}}
+                    {{> ingredient}}
+                {{/each}}
+            </div>
             <div class="button-wrapper">
-                <button class="btn btn-positive btn-block make-not-active">
+                <button class="btn btn-positive btn-block btn-add-cart">
                     <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Add to shopping list
                 </button>
             </div>
