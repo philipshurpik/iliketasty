@@ -1,5 +1,5 @@
 Template.joinPage.rendered = function() {
-    Session.set('headerState', { text: "Регистрация", back: true });
+    Session.set('headerState', { text: "", back: true });
 };
 Template.joinPage.events({
     'submit': function(event) {
