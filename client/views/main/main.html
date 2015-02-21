@@ -1,0 +1,56 @@
+<template name="main">
+	<div id="app" class="{{cordova}} {{platform}}">
+        <div class="status-bar"></div>
+        <header class="bar bar-nav">
+            {{#if headerState.backPage}}
+                <a href="{{pathFor route=headerState.backPage}}" class="btn btn-link btn-nav pull-left">
+                    <span class="icon icon-left-nav"></span>Back
+                </a>
+            {{/if}}
+            {{#if headerState.back }}
+                <a href="" class="btn btn-link btn-nav pull-left">
+                    <span class="icon icon-left-nav"></span>Back
+                </a>
+            {{/if}}
+            <h1 class="title">{{headerState.text}}</h1>
+            {{#if headerState.settings }}
+                <a href="" class="btn btn-link btn-nav pull-right">
+                    <span class="icon header-icon-settings"><i class="ion-gear-a"></i></span>
+                </a>
+            {{/if}}
+        </header>
+        <div class="content-overlay"></div>
+        <div id="content">
+            {{> yield}}
+        </div>
+        <nav class="bar bar-tab">
+            <a class='tab-item {{activePageBoard}}' href="{{pathFor 'board'}}">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">Orders</span>
+            </a>
+            <a class="tab-item {{activePageStatistics}}" href="{{pathFor 'statisticsPage'}}">
+                <span class="icon"><i class="ion-stats-bars"></i></span>
+                <span class="tab-label">Statistics</span>
+            </a>
+            {{#if currentUser }}
+                <a class="tab-item {{activePageProfile}}" href="{{pathFor 'profilePage'}}">
+                    <span class="icon icon-person"></span>
+                    <span class="tab-label">Profile</span>
+                </a>
+                <a class="tab-item {{activePageMyOrders}}" href="{{pathFor 'board'}}">
+                    <span class="icon"><i class="ion-bag"></i></span>
+                    <span class="tab-label">MyOrders</span>
+                </a>
+            {{else}}
+                <a class="tab-item {{activePageSignin}}" href="{{pathFor 'signinPage'}}">
+                    <span class="icon icon-person"></span>
+                    <span class="tab-label">Sign in</span>
+                </a>
+            {{/if}}
+            <a class='tab-item {{activePageNewOrder}}' href="{{pathFor 'newOrderPage'}}">
+                <span class="icon icon-plus"></span>
+                <span class="tab-label">New order</span>
+            </a>
+        </nav>
+	</div>
+</template>

@@ -1,0 +1,27 @@
+<template name="signinPage">
+    <div id="signinPage" class="page page-base auth-page">
+        <div class="div-inset signin-info">
+            <p class="text">Вход в систему позволит вам создавать, просматривать, редактировать и удалять заявки<br/>
+            </p>
+        </div>
+        <form class="form-inset">
+            <div class="input-wrapper">
+                <input type="tel" id="phone" name="phone" placeholder="Номер телефона" value="+380"/>
+                <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="password" name="password" placeholder="Пароль"/>
+                <span class="icon"><i class="ion-locked"></i></span>
+            </div>
+            <button type="submit" class="btn btn-positive btn-block signin">
+                <span class="icon"><i class="ion-paper-airplane"></i></span>Войти
+            </button>
+        </form>
+        <div class="signin-not-registered div-inset">
+            <p class="text go-to-join-page">
+                Еще не зарегестрированы? <br/>
+                <a>Создать аккаунт</a>
+            </p>
+        </div>
+    </div>
+</template>

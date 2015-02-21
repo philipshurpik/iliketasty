@@ -1,4 +1,4 @@
-/*Meteor.publish("Orders", function() {
+Meteor.publish("Orders", function() {
 	var currentDate = new Date();
     currentDate = currentDate.setDate(currentDate.getDate() - 1);
     return Orders.find({
@@ -10,4 +10,4 @@
             $gte: new Date(currentDate)
         }
 	});
-});*/
+});
