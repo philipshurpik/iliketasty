@@ -4,12 +4,12 @@
         <header class="bar bar-nav">
             {{#if headerState.backPage}}
                 <a href="{{pathFor route=headerState.backPage}}" class="btn btn-link btn-nav pull-left">
-                    <span class="icon icon-left-nav"></span>Back
+                    <span class="icon icon-back"></span>Back
                 </a>
             {{/if}}
             {{#if headerState.back }}
                 <a href="" class="btn btn-link btn-nav pull-left">
-                    <span class="icon icon-left-nav"></span>Back
+                    <span class="icon icon-back"></span>Back
                 </a>
             {{/if}}
             <h1 class="title">{{headerState.text}}</h1>
@@ -25,11 +25,11 @@
         </div>
         <nav class="bar bar-tab">
             <a class='tab-item {{activePageBoard}}' href="{{pathFor 'categories'}}">
-                <span class="icon icon-home"></span>
+                <span class="icon icon-categories"></span>
                 <span class="tab-label"></span>
             </a>
             <a class="tab-item {{activePageStatistics}}" href="{{pathFor 'categories'}}">
-                <span class="icon"><i class="icon-star-filled"></i></span>
+                <span class="icon"><i class="icon-favorites"></i></span>
                 <span class="tab-label"></span>
             </a>
             {{#if currentUser }}
@@ -43,7 +43,7 @@
                 </a>
             {{else}}
                 <a class="tab-item {{activePageSignin}}" href="{{pathFor 'categories'}}">
-                    <span class="icon icon-trash"></span>
+                    <span class="icon icon-shopping_list"></span>
                     <span class="tab-label"></span>
                 </a>
             {{/if}}
