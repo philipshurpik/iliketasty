@@ -29,6 +29,9 @@ body {
   .ios & {
     top: 64px;
   }
+  .header-transparent &, .header-transparent.ios & {
+    top: 0px;
+  }
 }
 
 .content-overlay {
@@ -56,16 +59,10 @@ body {
 
 .bar {
   background-color: @color-light-grey;
-  color: @color-white;
+  color: @color-black;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-  .title {
-    color: black;
-  }
-  .btn-link {
-    color: @color-green
-  }
   .tab-item {
     color: @color-bar-icons;
     &.active, &:active {
@@ -86,8 +83,20 @@ body {
 }
 
 .bar-nav {
+  .title {
+    color: @color-black;
+  }
+  .btn-link {
+    color: @color-green
+  }
   .ios & {
     top: 20px;
+  }
+  .header-transparent & {
+    background-color: transparent;
+    .title, .btn-link {
+      color: @color-white;
+    }
   }
 }
 .header-icon-settings {

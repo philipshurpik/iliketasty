@@ -1,4 +1,4 @@
-Session.setDefault('headerState', { back: false, backPage: "", text: "Categories" });
+Session.setDefault('headerState', { back: false, backPage: "", text: "Categories", isTransparent: false });
 
 Meteor.startup(function () {
     document.addEventListener("deviceready", function() {
@@ -41,6 +41,9 @@ Template.main.helpers({
     },
     platform: function() {
         return Session.get('platform');
+    },
+    headerTransparent: function() {
+        return Session.get('headerState').isTransparent && 'header-transparent';
     },
     headerState: function() {
         return Session.get('headerState');

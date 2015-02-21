@@ -1,6 +1,35 @@
-@import '../main/main.less';
+// Mixins & utilities
+@import '../../stylesheets/util/reset.import.less';
+@import '../../stylesheets/util/lesshat.import.less';
+@import '../../stylesheets/util/helpers.import.less';
+
 .recipe-page {
+  .recipe-picture {
+    overflow: hidden;
+    padding: 35%;
+    position: relative;
+  }
+  .recipe-picture img {
+    width: 100%;
+    position: absolute;
+    top: -15%;
+    left: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   background-color: @color-light-green !important;
+
   .div-inset {
     margin: 10px 20px;
     .btn-block {
