@@ -4,6 +4,7 @@ Meteor.startup(function () {
     document.addEventListener("deviceready", function() {
         if (window.device && window.device.platform) {
             Session.set('platform', window.device.platform.toLowerCase());
+            console.log('ddd');
         }
     });
 });
