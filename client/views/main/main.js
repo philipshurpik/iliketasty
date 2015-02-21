@@ -4,12 +4,13 @@ Meteor.startup(function () {
     document.addEventListener("deviceready", function() {
         if (window.device && window.device.platform) {
             Session.set('platform', window.device.platform.toLowerCase());
+            console.log('ddd');
         }
     });
 });
 
 Template.main.rendered = function() {
-    this.find('#content')._uihooks = {
+    /*this.find('#content')._uihooks = {
         insertElement: function(node, next) {
             if ($(node).hasClass('page-animate')) {
                 $(node).insertBefore(next);
@@ -32,7 +33,7 @@ Template.main.rendered = function() {
                 $(node).fadeOut(function() { $(this).remove(); });
             }
         }
-    };
+    };*/
 };
 
 Template.main.helpers({
