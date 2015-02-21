@@ -1,5 +1,5 @@
 Template.recipePage.rendered = function() {
-    Session.set('headerState', { text: "Recipe", back: true });
+    Session.set('headerState', { text: "Recipe", back: true, isTransparent: true });
 };
 Template.recipePage.events({
     'click .btn-start': function() {
