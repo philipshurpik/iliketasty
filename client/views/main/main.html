@@ -29,7 +29,7 @@
                 <span class="tab-label"></span>
             </a>
             <a class="tab-item {{activePageStatistics}}" href="{{pathFor 'categories'}}">
-                <span class="icon"><i class="ion-stats-bars"></i></span>
+                <span class="icon"><i class="icon-star-filled"></i></span>
                 <span class="tab-label"></span>
             </a>
             {{#if currentUser }}
@@ -43,12 +43,12 @@
                 </a>
             {{else}}
                 <a class="tab-item {{activePageSignin}}" href="{{pathFor 'categories'}}">
-                    <span class="icon icon-person"></span>
+                    <span class="icon icon-trash"></span>
                     <span class="tab-label"></span>
                 </a>
             {{/if}}
             <a class='tab-item {{activePageNewOrder}}' href="{{pathFor 'categories'}}">
-                <span class="icon icon-plus"></span>
+                <span class="icon icon-more"></span>
                 <span class="tab-label"></span>
             </a>
         </nav>

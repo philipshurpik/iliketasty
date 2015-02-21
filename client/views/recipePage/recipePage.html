@@ -1,40 +1,36 @@
 <template name="recipePage">
 	<div id="recipePage" class="page recipe-page page-animate page-animate-start">
-        <div class="form-inset div-inset">
+        <div class="div-inset">
+
             <div class="text-label">
-                <span class="icon"><i class="ion-ios7-pricetag"></i></span>
-                <label class="text-name">{{type}}</label>
-                <label class="text-value text-currency">{{currency}}</label>
+                Title: {{title}}
             </div>
             <div class="text-label">
-                <span class="icon"><i class="ion-ios7-calculator"></i></span>
-                <label class="text-name">Курс</label>
-                <label class="text-value">{{rate}}</label>
+                Time: {{time}}
             </div>
             <div class="text-label">
-                <span class="icon"><i class="ion-ios7-speedometer"></i></span>
-                <label class="text-name">Сумма</label>
-                <label class="text-value">{{amount}}</label>
+                Likes: nothing
             </div>
             <div class="text-label">
-                <span class="icon icon-bigger"><i class="ion-location"></i></span>
-                <label class="text-name">Город</label>
-                <label class="text-value">{{city}}</label>
+            About
             </div>
             <div class="text-label">
-                <span class="icon"><i class="ion-ios7-navigate"></i></span>
-                <label class="text-name text-grey">Подъеду</label>
+                {{description}}
             </div>
-            <div class="input-wrapper comment-wrapper">
-                <textarea id="comment" name="comment" placeholder="Комментарий" readonly>{{comment}}</textarea>
-                <span class="icon"><i class="ion-chatbubble"></i></span>
+            <div class="text-label">
+                Share
+            </div>
+            <div class="button-wrapper">
+                <button class="btn btn-positive btn-block btn-start">
+                    <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Start cooking
+                </button>
+            </div>
+            <div class="text-label">
+                Ingredients
             </div>
             <div class="button-wrapper">
                 <button class="btn btn-positive btn-block make-not-active">
-                    <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Позвонить
-                </button>
-                <button class="btn btn-positive btn-block make-not-active float-right">
-                    <span class="icon icon-bigger"><i class="ion-ios7-chatboxes"></i></span>Чат
+                    <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Add to shopping list
                 </button>
             </div>
         </div>

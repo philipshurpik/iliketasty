@@ -54,17 +54,21 @@ body {
 }
 
 .bar {
-  background-color: @color-green;
+  background-color: @color-light-grey;
   color: @color-white;
   -webkit-box-shadow: none;
   box-shadow: none;
-  .title, .btn-link {
-    color: @color-white;
+  border: none;
+  .title {
+    color: black;
+  }
+  .btn-link {
+    color: @color-green
   }
   .tab-item {
-    color: @color-white;
+    color: @color-bar-icons;
     &.active, &:active {
-      color: @color-accent;
+      color: @color-green;
     }
   }
 }

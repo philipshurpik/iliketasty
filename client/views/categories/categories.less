@@ -1,9 +1,33 @@
 @import '../main/main.less';
-
+.categories-list {
+	height: 100%;
+}
 .categories-page {
-
+	.category-item {
+		border-bottom: 1px solid @grey-lines;
+		&:nth-child(even) {
+			border-left: 1px solid @grey-lines;
+		}
+	}
 }
 
 .category-item {
-  position: relative;
+  width: 50%;
+  float: left;
+  height: 33.39%;
+  text-align: center;
+  .box-sizing;
+  .order-link {
+  	color: black;
+  }
+  .category-image {
+  	width: 82px;
+  	height: 82px;
+  	display: inline-block;
+  	padding-top: 30px;
+  	img {
+  		width: 100%;
+  		border: 0;
+  	}
+  }
 }

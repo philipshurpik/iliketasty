@@ -2,7 +2,9 @@ Template.recipePage.rendered = function() {
     Session.set('headerState', { text: "Recipe", back: true });
 };
 Template.recipePage.events({
-
+    'click .btn-start': function() {
+        Router.go('stepPage', {_id: this._id});
+    }
 });
 Template.recipePage.helpers({
 	isOwner: function() {
