@@ -1,13 +1,13 @@
-Meteor.publish("Orders", function() {
-	var currentDate = new Date();
-    currentDate = currentDate.setDate(currentDate.getDate() - 1);
-    return Orders.find({
-		$or: [
-			{ private: { $ne: true } },
-			{ owner: this.userId }
-		],
-        createdAt: {
-            $gte: new Date(currentDate)
-        }
+Meteor.publish("Timers", function() {
+	return Timers.find({
+        userId: this.userId
 	});
+});
+
+Meteor.publish("Comments", function() {
+    return Comments.find();
+});
+
+Meteor.publish("Likes", function() {
+    return Likes.find();
 });
