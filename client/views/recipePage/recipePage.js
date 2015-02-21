@@ -4,9 +4,18 @@ Template.recipePage.rendered = function() {
 Template.recipePage.events({
     'click .btn-start': function() {
         Router.go('stepPage', {_id: this._id});
+    },
+    'click .btn-add-cart': function() {
+
     }
 });
 Template.recipePage.helpers({
+    ingredientsList: function() {
+        return this.ingredients;
+    },
+
+    /////// old code
+
     isOwner: function() {
         return this.owner === Meteor.userId();
     },
