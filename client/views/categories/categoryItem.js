@@ -1,5 +1,5 @@
-Template.categoryItem.helpers({
-	picture: function() {
-		return "picture";
-	}
-});
+// Template.categoryItem.helpers({
+// 	picture: function() {
+// 		return "picture";
+// 	}
+// });
