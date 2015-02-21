@@ -1,11 +1,14 @@
-@color-green: #7bc5aa;
+@color-green: #5bb7b6;
 @color-dark-green: #6DA896;
 @color-light-green: #E6F7F1;
 @color-white: #ffffff;
 @color-accent: #F4E57C;
-@color-light-grey: #cccccc;
+@color-light-grey: #f7f7f7;
 @color-grey: #999999;
 @color-dark-grey: #555555;
+
+@color-bar-icons: #cad0d4;
+@grey-lines: #e5ebef;
 
 .position(@type; @top: auto; @right: auto; @bottom: auto; @left: auto; @width: auto; @height: auto) {
 	position: @type;
@@ -36,4 +39,10 @@
 	-ms-word-break: break-all;
 	word-break: break-word; // Non-standard for webkit
 	.hyphens(auto);
+}
+
+.box-sizing (@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
 }

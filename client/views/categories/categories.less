@@ -1,9 +1,23 @@
 @import '../main/main.less';
-
+.categories-list {
+	height: 100%;
+}
 .categories-page {
-
+	.category-item {
+		border-bottom: 1px solid @grey-lines;
+		&:nth-child(even) {
+			border-left: 1px solid @grey-lines;
+		}
+	}
 }
 
 .category-item {
-  position: relative;
+  width: 50%;
+  float: left;
+  height: calc(100%/3);
+  text-align: center;
+  .box-sizing;
+  .order-link {
+  	color: black;
+  }
 }
