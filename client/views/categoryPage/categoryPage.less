@@ -1,9 +1,44 @@
-@import '../main/main.less';
+// Mixins & utilities
+@import '../../stylesheets/util/reset.import.less';
+@import '../../stylesheets/util/lesshat.import.less';
+@import '../../stylesheets/util/helpers.import.less';
 
 .category-page {
 
 }
 
 .recipe-item {
+	padding: 5px;
+	border-bottom: 1px solid #d5d5d5;
+	.recipe-image {
+		width: 82px;
+		height: 82px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	.recipe-title {
+		display: inline-block;
+		vertical-align: middle;
+		color: black;
+		width: 67%;
+	}
+}
 
+.recipe-marks {
+	font-size: 12px;
+	.icon {
+		font-size: 14px;
+		margin-right: 3px;
+		color: @color-green;
+	}
+	.recipe-time, .recipe-likes {
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 5px;
+	}
 }

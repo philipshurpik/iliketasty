@@ -1,5 +1,5 @@
 Template.recipePage.rendered = function() {
-    Session.set('headerState', { text: "Recipe", back: true });
+    Session.set('headerState', { text: "Recipe", back: true, isTransparent: true });
 };
 Template.recipePage.events({
     'click .btn-start': function() {
@@ -7,9 +7,9 @@ Template.recipePage.events({
     }
 });
 Template.recipePage.helpers({
-	isOwner: function() {
-		return this.owner === Meteor.userId();
-	},
+    isOwner: function() {
+        return this.owner === Meteor.userId();
+    },
     showDrive: function() {
         return this.isDrive;
     },
@@ -20,6 +20,8 @@ Template.recipePage.helpers({
         return this.type === "sell" ? "Покупка" : "Продажа";
     },
     amount: function() {
-        return ("" + this.amount).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, function($1) { return $1 + " "; });
+        return ("" + this.amount).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, function($1) {
+            return $1 + " ";
+        });
     }
 });

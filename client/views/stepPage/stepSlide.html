@@ -1,0 +1,22 @@
+<template name="stepSlide">
+    <div class="slide">
+        <div class="step-picture">
+            <img src="/category/vanilla.jpg">
+        </div>
+        {{#if time}}
+            <div class="step-time">
+                {{time}}
+            </div>
+        {{/if}}
+        <div class="step-instruction">
+            {{description}}
+        </div>
+        {{#if timerTime}}
+            <div class="step-time">
+                <button class="btn btn-positive btn-block make-not-active">
+                    <span class="icon icon-bigger"><i class="ion-ios7-telephone"></i></span>Start timer
+                </button>
+            </div>
+        {{/if}}
+    </div>
+</template>

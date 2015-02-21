@@ -1,5 +1,5 @@
-Template.recipeItem.helpers({
-	picture: function() {
-		return "picture";
-	}
-});
+// Template.recipeItem.helpers({
+// 	picture: function() {
+// 		return "picture";
+// 	}
+// });

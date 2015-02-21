@@ -1,4 +1,25 @@
-@import '../main/main.less';
-.step-page {
+// Mixins & utilities
+@import '../../stylesheets/util/reset.import.less';
+@import '../../stylesheets/util/lesshat.import.less';
+@import '../../stylesheets/util/helpers.import.less';
 
+.step-page {
+  .slider {
+    background-color: @color-white;
+  }
+  .step-picture {
+    overflow: hidden;
+    padding: 42%;
+    position: relative;
+  }
+  .step-picture img {
+    width: 100%;
+    position: absolute;
+    top: -5%;
+    left: 0;
+  }
+  .step-instruction {
+    white-space: normal;
+  }
 }
+

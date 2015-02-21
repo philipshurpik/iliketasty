@@ -12,6 +12,7 @@ body {
   font-style: 400;
   color: #333333;
   font-size: 16px;
+  line-height: 18px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,6 +29,9 @@ body {
   .ios & {
     top: 64px;
   }
+  .header-transparent &, .header-transparent.ios & {
+    top: 0px;
+  }
 }
 
 .content-overlay {
@@ -41,7 +45,7 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   background-color: @color-white;
-  .translate3d(0, 0, 0);
+  //.translate3d(0, 0, 0);
 }
 .page-animate {
   .transition(all 300ms ease);
@@ -49,22 +53,16 @@ body {
   opacity: 1;
 }
 .page-animate-start {
-  .translate3d(100%, 0, 0);
-  opacity: 0;
+  //.translate3d(100%, 0, 0);
+  //opacity: 0;
 }
 
 .bar {
   background-color: @color-light-grey;
-  color: @color-white;
+  color: @color-black;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-  .title {
-    color: black;
-  }
-  .btn-link {
-    color: @color-green
-  }
   .tab-item {
     color: @color-bar-icons;
     &.active, &:active {
@@ -85,8 +83,20 @@ body {
 }
 
 .bar-nav {
+  .title {
+    color: @color-black;
+  }
+  .btn-link {
+    color: @color-green
+  }
   .ios & {
     top: 20px;
+  }
+  .header-transparent & {
+    background-color: transparent;
+    .title, .btn-link {
+      color: @color-white;
+    }
   }
 }
 .header-icon-settings {

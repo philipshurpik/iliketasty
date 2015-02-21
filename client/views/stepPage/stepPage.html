@@ -2,19 +2,9 @@
 	<div id="stepPage" class="page step-page page-animate page-animate-start">
         <div class="slider" id="mySlider">
             <div class="slide-group">
-                <div class="slide">
-                    <img src="/recipes/altamura-pea-soup.jpg">
-                    <span class="slide-text">
-                    <span class="icon icon-left-nav"></span>
-                        Slide me
-                    </span>
-                </div>
-                <div class="slide">
-                    <img src="/recipes/altamura-pea-soup.jpg">
-                </div>
-                <div class="slide">
-                    <img src="/recipes/altamura-pea-soup.jpg">
-                </div>
+                {{#each stepsList}}
+                    {{> stepSlide}}
+                {{/each}}
             </div>
         </div>
 
