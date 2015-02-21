@@ -1,5 +1,5 @@
 Template.board.rendered = function() {
-    Session.set('headerState', { text: "Все заявки", settings: true });
+    Session.set('headerState', { text: "Categories" });
 };
 Template.board.helpers({
     activeCity: function() {

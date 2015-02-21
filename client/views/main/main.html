@@ -24,32 +24,32 @@
             {{> yield}}
         </div>
         <nav class="bar bar-tab">
-            <a class='tab-item {{activePageBoard}}' href="{{pathFor 'board'}}">
+            <a class='tab-item {{activePageBoard}}' href="{{pathFor 'categories'}}">
                 <span class="icon icon-home"></span>
-                <span class="tab-label">Orders</span>
+                <span class="tab-label"></span>
             </a>
-            <a class="tab-item {{activePageStatistics}}" href="{{pathFor 'statisticsPage'}}">
+            <a class="tab-item {{activePageStatistics}}" href="{{pathFor 'categories'}}">
                 <span class="icon"><i class="ion-stats-bars"></i></span>
-                <span class="tab-label">Statistics</span>
+                <span class="tab-label"></span>
             </a>
             {{#if currentUser }}
-                <a class="tab-item {{activePageProfile}}" href="{{pathFor 'profilePage'}}">
+                <a class="tab-item {{activePageProfile}}" href="{{pathFor 'categories'}}">
                     <span class="icon icon-person"></span>
-                    <span class="tab-label">Profile</span>
+                    <span class="tab-label"></span>
                 </a>
-                <a class="tab-item {{activePageMyOrders}}" href="{{pathFor 'board'}}">
+                <a class="tab-item {{activePageMyOrders}}" href="{{pathFor 'categories'}}">
                     <span class="icon"><i class="ion-bag"></i></span>
-                    <span class="tab-label">MyOrders</span>
+                    <span class="tab-label"></span>
                 </a>
             {{else}}
-                <a class="tab-item {{activePageSignin}}" href="{{pathFor 'signinPage'}}">
+                <a class="tab-item {{activePageSignin}}" href="{{pathFor 'categories'}}">
                     <span class="icon icon-person"></span>
-                    <span class="tab-label">Sign in</span>
+                    <span class="tab-label"></span>
                 </a>
             {{/if}}
-            <a class='tab-item {{activePageNewOrder}}' href="{{pathFor 'newOrderPage'}}">
+            <a class='tab-item {{activePageNewOrder}}' href="{{pathFor 'categories'}}">
                 <span class="icon icon-plus"></span>
-                <span class="tab-label">New order</span>
+                <span class="tab-label"></span>
             </a>
         </nav>
 	</div>
