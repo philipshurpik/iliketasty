@@ -5,15 +5,15 @@ Template.signinPage.events({
     'submit': function(event) {
         event.preventDefault();
         var form = event.target;
-        var phone = form.phone.value;
+        var email = form.email.value;
         var password = form.password.value;
         var error = "";
-        if (!phone || !password) {
-            error = "Please fill phone and password";
+        if (!email || !password) {
+            error = "Please fill email and password";
             Session.set('signinPageErrors', error);
             return;
         }
-        Meteor.loginWithPassword(phone, password, function(error) {
+        Meteor.loginWithPassword(email, password, function(error) {
             if (error) {
                 return Session.set('signinPageErrors', error.reason);
             }
