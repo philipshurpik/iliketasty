@@ -48,22 +48,13 @@ Template.main.helpers({
     headerState: function() {
         return Session.get('headerState');
     },
-    activePageBoard: function() {
+    activePageCategories: function() {
         var page = Session.get('activePage');
-        var allOrders = Session.get('showAllOrders');
-        return (page === 'board' && allOrders || page === 'orderPage' && allOrders) && 'active';
+        return (page === 'categories' || page === 'categoryPage'|| page === 'recipePage' || page === 'stepPage') && 'active';
     },
-    activePageMyOrders: function() {
+    activePageAuth: function() {
         var page = Session.get('activePage');
-        var allOrders = Session.get('showAllOrders');
-        return (page === 'board' && !allOrders || page === 'orderPage' && !allOrders) && 'active';
-    },
-    activePageNewOrder: function() {
-        return Session.get('activePage') === 'newOrderPage' && 'active';
-    },
-    activePageSignin: function() {
-        var page = Session.get('activePage');
-        return (page === 'signinPage' || page === 'joinPage') && 'active';
+        return (page === 'signinPage' || page === 'joinPage'  || page === 'authPage') && 'active';
     },
     activePageProfile: function() {
         return Session.get('activePage') === 'profilePage' && 'active';
