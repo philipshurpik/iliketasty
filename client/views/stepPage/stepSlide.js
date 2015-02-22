@@ -2,12 +2,15 @@ Template.stepSlide.events({
     "click .btn-start-timer": function setTimer(e) {
         var timerTime = this.timerTime,
             popupEl = $(e.target).parents('#stepPage').find('.timerPopup');
+        var recipeId = Session.get('recipeId');
+        var stepTitle = this.title;
+
+        Meteor.call('addTimer', recipeId, stepTitle, timerTime);
 
         Meteor.startup(function () {
 
             var now = new Date().getTime(),
-                stepTimer = 5,
-                alarm_time = new Date(now + stepTimer * 1000);
+                alarm_time = new Date(now + timerTime * 1000);
 
             if (Meteor.isCordova) {
                 setAlarm();
