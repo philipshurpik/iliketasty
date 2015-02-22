@@ -401,12 +401,12 @@ p {
 .btn-positive {
   color: #fff;
   background-color: #5cb85c;
-  border: 1px solid #5cb85c;
+  /*border: 1px solid #5cb85c;*/
 }
 .btn-positive:active, .btn-positive.active {
   color: #fff;
   background-color: #449d44;
-  border: 1px solid #449d44;
+  /*border: 1px solid #449d44;*/
 }
 
 .btn-negative {
