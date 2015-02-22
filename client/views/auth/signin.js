@@ -17,7 +17,7 @@ Template.signinPage.events({
             if (error) {
                 return Session.set('signinPageErrors', error.reason);
             }
-            Router.go('board');
+            Router.go('/');
         });
     },
     'click .go-to-join-page': function() {
