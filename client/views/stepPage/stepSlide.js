@@ -11,6 +11,17 @@ Template.stepSlide.events({
 
             navigator.plugins.alarm.set(alarm_time,
                 function () {
+                    $('.tab-timer').css('display', 'table-cell');
+                    $('.tab-timer').find('p').html(stepTimer);
+
+                    var interval = window.setInterval(function () {
+                        stepTimer--;
+                        $('.tab-timer').find('p').html(stepTimer);
+                        if (stepTimer === 0) {
+                            window.clearInterval(interval);
+                        }
+                    }, 1000);
+
                     setTimeout(function () {
                         window.my_media = new Media('http://soundbible.com/grab.php?id=2061&type=mp3',
 //                        // success callback
@@ -32,7 +43,10 @@ Template.stepSlide.events({
                             var cur_scroll = parseInt($('.slide-group')[0].style.webkitTransform.match(/translate3d\(([^,]*)/)[1], 10),
                                 new_scroll = -(Math.abs(cur_scroll) + document.body.offsetWidth);
                             $('.slide-group')[0].style.webkitTransform = 'translate3d(' + new_scroll + 'px,0,0)';
-                        })
+
+                            $('.tab-timer').css('display', 'none');
+                        });
+
                         document.addEventListener("backbutton", function () {
                             window.my_media.stop();
                             history.go(-1);
