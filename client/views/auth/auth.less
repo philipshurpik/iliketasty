@@ -4,7 +4,6 @@
 @import '../../stylesheets/util/helpers.import.less';
 
 .auth-page {
-  background-color: @color-light-green !important;
   .signin-info, .join-info {
     margin-bottom: 8%;
     margin-top: 8%;
@@ -14,3 +13,37 @@
     text-align: center;
   }
 }
+
+.form-inset {
+	.btn.btn-positive {
+		border-radius: 5px !important;
+	}
+	.btn.signin-facebook {
+		background-color: #3b5998;
+	}
+	.btn.signin-twitter {
+		background-color: #55acee;
+	}
+}
+
+.logo {
+	background: #cad0d4;
+	width: 145px;;
+	height: 145px;
+	border-radius: 50%;
+	margin: 15px auto 0;
+}
+
+.input-wrapper {
+	margin-bottom: 8px;
+	input {
+		border: 1px solid @color-green !important;
+		border-radius: 5px !important;
+		padding-left: .75em !important;
+		height: 40px !important;
+	}
+}
+
+
+
+

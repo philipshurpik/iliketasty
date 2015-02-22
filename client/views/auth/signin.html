@@ -1,23 +1,21 @@
 <template name="signinPage">
     <div id="signinPage" class="page page-base auth-page">
-
+        <div class="logo"></div>
         <form class="form-inset">
             <div class="input-wrapper">
-                <input type="email" id="email" name="email" placeholder="Электронный адрес" value=""/>
-                <span class="icon icon-bigger"><i class="ion-ios7-email"></i></span>
+                <input type="email" id="email" name="email" placeholder="User Name" value=""/>
             </div>
             <div class="input-wrapper">
-                <input type="text" id="password" name="password" placeholder="Пароль"/>
-                <span class="icon"><i class="ion-locked"></i></span>
+                <input type="text" id="password" name="password" placeholder="Password"/>
             </div>
             <button type="submit" class="btn btn-positive btn-block signin">
-                <span class="icon"><i class="ion-paper-airplane"></i></span>Войти
+                Sign in
             </button>
         </form>
         <div class="signin-not-registered div-inset">
             <p class="text go-to-join-page">
-                Еще не зарегестрированы? <br/>
-                <a>Создать аккаунт</a>
+                Don't have an account <br/>
+                <a>Creat account</a>
             </p>
         </div>
     </div>
