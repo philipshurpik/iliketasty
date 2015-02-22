@@ -69,8 +69,8 @@ Template.main.helpers({
         return Session.get('activePage') === 'profilePage' && 'active';
     },
 
-    tabTimerDisplay: function() {
-        return Session.get('activeTimer') > 0 && 'true';
+    tabTimerHidden: function() {
+        return !Session.get('activeTimer') && 'tab-timer-hidden';
     },
 
     activeTimerTime: function() {

@@ -43,7 +43,7 @@ Template.stepSlide.events({
             }, 1000);
 
             setTimeout(function () {
-                if (Media) {
+                if (window.Media) {
                     window.my_media = new Media('http://soundbible.com/grab.php?id=2061&type=mp3',
 //                        // success callback
                         function () {
@@ -62,7 +62,9 @@ Template.stepSlide.events({
 
                 popupEl.find('.btn-end-timer').on('click', function () {
                     popupEl.css('display', 'none');
-                    window.my_media.stop();
+                    if (window.my_media) {
+                        window.my_media.stop();
+                    }
                     var cur_scroll = parseInt($('.slide-group')[0].style.webkitTransform.match(/translate3d\(([^,]*)/)[1], 10),
                         new_scroll = -(Math.abs(cur_scroll) + document.body.offsetWidth);
                     $('.slide-group')[0].style.webkitTransform = 'translate3d(' + new_scroll + 'px,0,0)';
