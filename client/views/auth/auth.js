@@ -1,4 +1,7 @@
 Template.authPage.rendered = function() {
+    if (Meteor.userId() !== null) {
+        Router.go('/');
+    }
     Session.set('headerState', { text: "Вход в программу" });
 };
 Template.authPage.events({
@@ -9,9 +12,13 @@ Template.authPage.events({
         Router.go('joinPage');
     },
     'click .signin-facebook': function() {
-        // some facebook logic
-
-
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            } else {
+                Router.go('/');
+            }
+        });
     },
     'click .signin-twitter': function() {
         // some twitter logic

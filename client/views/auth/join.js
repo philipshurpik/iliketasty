@@ -5,14 +5,14 @@ Template.joinPage.events({
     'submit': function(event) {
         event.preventDefault();
         var form = event.target;
-        var phone = form.phone.value;
+        var email = form.email.value;
         var password = form.password.value;
         var confirm = form.confirm.value;
         var city = form.city.value;
         var name = form.name.value;
         var error = "";
-        if (!phone || phone.length < 7) {
-            error = "Correct phone number is required";
+        if (!email || email.length < 7) {
+            error = "Correct email is required";
             Session.set('joinPageErrors', error);
             return;
         }
@@ -22,10 +22,10 @@ Template.joinPage.events({
             return;
         }
         Accounts.createUser({
-            username: phone,
+            username: email,
             password: password,
             profile: {
-                phone: phone,
+                email: email,
                 city: city,
                 name: name,
                 notifications: true
