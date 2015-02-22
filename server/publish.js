@@ -5,9 +5,9 @@ Meteor.publish("Timers", function() {
 });
 
 Meteor.publish("Comments", function() {
-    return Comments.find();
+    return Comments.find({});
 });
 
 Meteor.publish("Likes", function() {
-    return Likes.find();
+    return Likes.find({});
 });

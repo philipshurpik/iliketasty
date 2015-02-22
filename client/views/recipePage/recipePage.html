@@ -7,14 +7,14 @@
                 <div class="rec-title">{{title}}</div>
                 <div class="recipe-marks">
                     <div class="recipe-time"><span class="icon icon-clock"></span>{{time}}</div>
-                    <div class="recipe-likes"><span class="icon icon-favorites"></span>2</div>
+                    <div class="recipe-likes"><span class="icon icon-favorites"></span>{{likesCount}}</div>
                 </div>
             </div>
             <div class="bar bar-nav">
                 <a href="" class="btn btn-link btn-nav pull-left">
                     <span class="icon icon-back"></span>Back
                 </a>
-                <div class="like"><span class="icon icon-favorites"></span></div>
+                <div class="like {{isLikeActive}}"><span class="icon icon-favorites"></span></div>
             </div>
         </div>
 

@@ -3,7 +3,16 @@ Template.recipePage.rendered = function() {
 };
 Template.recipePage.events({
     'click .like': function() {
-        Meteor.call('addLike', this._id, true);
+        var userLikes = Likes.find({
+            recipeId: this.recipeId,
+            userId: Meteor.userId()
+        }).count();
+        if (userLikes === 0) {
+            Meteor.call('addLike', this.recipeId);
+        }
+        else {
+            Meteor.call('removeLike', this.recipeId);
+        }
     },
     'click .btn-start': function() {
         Router.go('stepPage', {_id: this._id});
@@ -13,6 +22,17 @@ Template.recipePage.events({
     }
 });
 Template.recipePage.helpers({
+    isLikeActive: function() {
+        return Likes.find({
+            recipeId: this.recipeId,
+            userId: Meteor.userId()
+        }).count() > 0 && 'liked';
+    },
+    likesCount: function() {
+        return Likes.find({
+            recipeId: this.recipeId
+        }).count()
+    },
     ingredientsList: function() {
         return this.ingredients;
     }
