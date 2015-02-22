@@ -12,7 +12,7 @@ Template.stepSlide.events({
             var now = new Date().getTime(),
                 alarm_time = new Date(now + timerTime * 1000);
 
-            if (Meteor.isCordova) {
+            if (Meteor.isCordova && Session.get('platform') !== "ios") {
                 setAlarm();
             }
             else {
