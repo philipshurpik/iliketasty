@@ -67,7 +67,16 @@ Template.main.helpers({
     },
     activePageProfile: function() {
         return Session.get('activePage') === 'profilePage' && 'active';
+    },
+
+    tabTimerDisplay: function() {
+        return Session.get('activeTimer') > 0 && 'true';
+    },
+
+    activeTimerTime: function() {
+        return Session.get('activeTimer');
     }
+
 });
 
 Template.main.events({

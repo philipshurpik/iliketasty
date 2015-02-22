@@ -1,5 +1,6 @@
 Template.stepPage.rendered = function() {
     Session.set('headerState', { text: "", back: true, isTransparent: true });
+    Session.set('recipeId', this.recipeId);
 };
 Template.stepPage.events({
 
