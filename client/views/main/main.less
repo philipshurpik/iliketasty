@@ -80,6 +80,9 @@ body {
   .ios & {
     height: 21px;
   }
+  .header-transparent &,  {
+    background-color: transparent;
+  }
 }
 
 .bar-nav {
@@ -98,7 +101,22 @@ body {
       color: @color-white;
     }
   }
+  .like {
+    position: absolute;
+    right: 0px;
+    padding: 0 20px;
+    top: 0px;
+    cursor: pointer;
+    color: white;
+    :hover {
+      color: @color-green;
+    }
+  }
 }
+.header-transparent header.bar-nav {
+  display: none;
+}
+
 .header-icon-settings {
   padding:7px 18px 12px 30px !important;
 }
