@@ -3,7 +3,7 @@ Template.recipePage.rendered = function() {
 };
 Template.recipePage.events({
     'click .like': function() {
-
+        Meteor.call('addLike', this._id, true);
     },
     'click .btn-start': function() {
         Router.go('stepPage', {_id: this._id});
