@@ -24,7 +24,7 @@
             {{> yield}}
         </div>
         <nav class="bar bar-tab">
-            <a class='tab-item {{activePageBoard}}' href="{{pathFor 'categories'}}">
+            <a class='tab-item {{activePageCategories}}' href="{{pathFor 'categories'}}">
                 <span class="icon icon-categories"></span>
                 <span class="tab-label"></span>
             </a>
@@ -42,7 +42,7 @@
                     <span class="tab-label"></span>
                 </a>
             {{else}}
-                <a class='tab-item {{activePageNewOrder}}' href="{{pathFor 'authPage'}}">
+                <a class='tab-item {{activePageAuth}}' href="{{pathFor 'authPage'}}">
                     <span class="icon icon-more"></span>
                     <span class="tab-label"></span>
                 </a>
