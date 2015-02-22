@@ -4,7 +4,6 @@ Meteor.startup(function () {
     document.addEventListener("deviceready", function() {
         if (window.device && window.device.platform) {
             Session.set('platform', window.device.platform.toLowerCase());
-            console.log('ddd');
         }
     });
 });
@@ -75,6 +74,7 @@ Template.main.events({
     'click .pull-left': function() {
         var headerState = Session.get('headerState');
         if (!headerState.backPage && headerState.back === true) {
+            console.log('back');
             history.back();
         }
     }
