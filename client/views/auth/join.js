@@ -22,6 +22,7 @@ Template.joinPage.events({
         }
         Accounts.createUser({
             username: email,
+            email: email,
             password: password,
             profile: {
                 email: email,
